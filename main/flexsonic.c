@@ -1,3 +1,5 @@
+//including all the necessary libraries
+
 #include <stdio.h>
 #include "freertos/FreeRTOS.h"
 #include "freertos/task.h"
