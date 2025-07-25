@@ -59,13 +59,12 @@ Embedded C is a variant of the C programming language specifically optimized to
 program embedded systems — small computers like:
 
     Microcontrollers (e.g., ESP32, Arduino, STM32, PIC)
-
     Devices inside appliances, wearables, robots, etc.
 
 It lets you directly control hardware: pins, sensors, timers, memory, and peripherals 
 like UART, I²C, PWM, ADC, etc.
 
-#Toggles an LED
+## Toggles an LED
 
 '''
 #include "driver/gpio.h"
@@ -76,6 +75,7 @@ void app_main() {
   gpio_set_direction(LED_PIN, GPIO_MODE_OUTPUT);
 
   while(1) {
+    
     gpio_set_level(LED_PIN, 1);
     vTaskDelay(1000 / portTICK_PERIOD_MS);
 
