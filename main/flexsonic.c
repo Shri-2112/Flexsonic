@@ -7,12 +7,25 @@
 #include "esp_system.h"
 #include "esp_adc/adc_oneshot.h"
 
-#define FLEX_ADC_CHANNEL ADC_CHANNEL_6  // GPIO34
+#define UART_PORT_NUM UART_NUM_2
+
 #define UART_TX_PIN 17
 #define UART_RX_PIN 16
-#define UART_PORT_NUM UART_NUM_2
-#define TAG "FLEX_AUDIO"
-#define THRESHOLD 100
+
+#define FLEX_THUMB ADC_CHANNEL_4 // GPIO32
+#define FLEX_INDEX ADC_CHANNEL_5 // GPIO33
+#define FLEX_MIDDLE ADC_CHANNEL_6 // GPIO34
+#define FLEX_RING ADC_CHANNEL_7 // GPIO35
+#define FLEX_PINKY ADC_CHANNEL_0 // GPIO36
+
+
+#define TAG "FLEXSONIC"
+
+#define THUMB_THRESHOLD ... //values to be added
+#define INDEX_THRESHOLD ...
+#define MIDDLE_THRESHOLD ...
+#define RING_THRESHOLD ...
+#define PINKY_THRESHOLD ...
 
 // Send command to DFPlayer
 void sendDFPlayerCommand(uint8_t cmd, uint8_t param) {
@@ -39,7 +52,6 @@ void app_main(void) {
         .bitwidth = ADC_BITWIDTH_12,
         .atten = ADC_ATTEN_DB_11
     };
-    adc_oneshot_config_channel(adc1_handle, FLEX_ADC_CHANNEL, &chan_cfg);
 
     // UART config
     uart_config_t uart_config = {
@@ -60,22 +72,55 @@ void app_main(void) {
     sendDFPlayerCommand(0x06, 0x30); // Set volume to 48
     vTaskDelay(pdMS_TO_TICKS(500));
 
-    bool playing = false;
+    adc_oneshot_config_channel(adc1_handle, FLEX_THUMB, &chan_cfg);
+    adc_oneshot_config_channel(adc1_handle, FLEX_INDEX, &chan_cfg);
+    adc_oneshot_config_channel(adc1_handle, FLEX_MIDDLE, &chan_cfg);
+    adc_oneshot_config_channel(adc1_handle, FLEX_RING, &chan_cfg);
+    adc_oneshot_config_channel(adc1_handle, FLEX_PINKY, &chan_cfg);
+
+    bool playing[5] = {false, false, false, false, false};
 
     while (1) {
-        int val;
-        adc_oneshot_read(adc1_handle, FLEX_ADC_CHANNEL, &val);
-        ESP_LOGI(TAG, "Flex ADC: %d", val);
+        int values[5];
 
-        if (val > THRESHOLD && !playing) {
-            sendDFPlayerCommand(0x0F, 0x01);  // Play track 1 continuously
-            ESP_LOGI(TAG, "Playing 0001.mp3");
-            playing = true;
-        } else if (val <= THRESHOLD && playing) {
-            sendDFPlayerCommand(0x16, 0); // Stop playback
-            ESP_LOGI(TAG, "Stopping playback");
-            playing = false;
-        }
+        adc_oneshot_read(adc1_handle, FLEX_THUMB, &values[0]);
+        adc_oneshot_read(adc1_handle, FLEX_INDEX, &values[1]);
+        adc_oneshot_read(adc1_handle, FLEX_MIDDLE, &values[2]);
+        adc_oneshot_read(adc1_handle, FLEX_RING, &values[3]);
+        adc_oneshot_read(adc1_handle, FLEX_PINKY, &values[4]);
+
+        ESP_LOGI(TAG, "Thumb: %d | Index: %d | Middle: %d | Ring: %d | Pinky: %d",
+                 values[0], values[1], values[2], values[3], values[4]);
+
+        // Thumb
+        if (values[0] > THUMB_THRESHOLD && !playing[0]) {
+            sendDFPlayerCommand(0x0F, 0x01); // 0001.mp3
+            playing[0] = true;
+        } else if (values[0] <= THUMB_THRESHOLD) playing[0] = false;
+
+        // Index
+        if (values[1] > RING_THRESHOLD && !playing[1]) {
+            sendDFPlayerCommand(0x0F, 0x02); // 0002.mp3
+            playing[1] = true;
+        } else if (values[1] <= RING_THRESHOLD) playing[1] = false;
+
+        // Middle
+        if (values[2] > MIDDLE_THRESHOLD && !playing[2]) {
+            sendDFPlayerCommand(0x0F, 0x03); // 0003.mp3
+            playing[2] = true;
+        } else if (values[2] <= MIDDLE_THRESHOLD) playing[2] = false;
+
+        // Ring
+        if (values[3] > INDEX_THRESHOLD && !playing[3]) {
+            sendDFPlayerCommand(0x0F, 0x04); // 0004.mp3
+            playing[3] = true;
+        } else if (values[3] <= INDEX_THRESHOLD) playing[3] = false;
+
+        // Pinky
+        if (values[4] > PINKY_THRESHOLD && !playing[4]) {
+            sendDFPlayerCommand(0x0F, 0x05); // 0005.mp3
+            playing[4] = true;
+        } else if (values[4] <= PINKY_THRESHOLD) playing[4] = false;
 
         vTaskDelay(pdMS_TO_TICKS(500));
     }
