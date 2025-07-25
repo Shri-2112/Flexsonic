@@ -98,31 +98,36 @@ void app_main(void) {
         if (values[0] > THUMB_THRESHOLD && !playing[0]) {
             sendDFPlayerCommand(0x0F, 0x01); // 0001.mp3
             playing[0] = true;
-        } else if (values[0] <= THUMB_THRESHOLD) playing[0] = false;
+        } 
+        else if (values[0] <= THUMB_THRESHOLD) playing[0] = false;
 
         // Index
         if (values[1] > RING_THRESHOLD && !playing[1]) {
             sendDFPlayerCommand(0x0F, 0x02); // 0002.mp3
             playing[1] = true;
-        } else if (values[1] <= RING_THRESHOLD) playing[1] = false;
+        } 
+        else if (values[1] <= RING_THRESHOLD) playing[1] = false;
 
         // Middle
         if (values[2] > MIDDLE_THRESHOLD && !playing[2]) {
             sendDFPlayerCommand(0x0F, 0x03); // 0003.mp3
             playing[2] = true;
-        } else if (values[2] <= MIDDLE_THRESHOLD) playing[2] = false;
+        } 
+        else if (values[2] <= MIDDLE_THRESHOLD) playing[2] = false;
 
         // Ring
         if (values[3] > INDEX_THRESHOLD && !playing[3]) {
             sendDFPlayerCommand(0x0F, 0x04); // 0004.mp3
             playing[3] = true;
-        } else if (values[3] <= INDEX_THRESHOLD) playing[3] = false;
+        } 
+        else if (values[3] <= INDEX_THRESHOLD) playing[3] = false;
 
         // Pinky
         if (values[4] > PINKY_THRESHOLD && !playing[4]) {
             sendDFPlayerCommand(0x0F, 0x05); // 0005.mp3
             playing[4] = true;
-        } else if (values[4] <= PINKY_THRESHOLD) playing[4] = false;
+        } 
+        else if (values[4] <= PINKY_THRESHOLD) playing[4] = false;
 
         vTaskDelay(pdMS_TO_TICKS(500));
     }
