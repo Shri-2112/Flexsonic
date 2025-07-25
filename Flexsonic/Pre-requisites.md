@@ -1,4 +1,4 @@
-##ESP32
+### ESP32
 
 The ESP32 is a series of chip microcontrollers developed by Espressif. 
 
