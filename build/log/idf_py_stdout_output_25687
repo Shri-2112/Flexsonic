@@ -1,0 +1,306 @@
+ets Jun  8 2016 00:22:57
+
+rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:7128
+load:0x40078000,len:15724
+ho 0 tail 12 room 4
+load:0x40080400,len:4
+load:0x40080404,len:3876
+entry 0x4008064c
+[0;32mI (31) boot: ESP-IDF v5.1.6-415-g81ee3e87d5 2nd stage bootloader[0m
+[0;32mI (31) boot: compile time Jul 24 2025 16:05:19[0m
+[0;32mI (32) boot: Multicore bootloader[0m
+[0;32mI (36) boot: chip revision: v1.0[0m
+[0;32mI (40) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (45) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (49) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (54) boot: Enabling RNG early entropy source...[0m
+[0;32mI (59) boot: Partition Table:[0m
+[0;32mI (63) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (70) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (78) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (85) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (93) boot: End of partition table[0m
+[0;32mI (97) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=0ab68h ( 43880) map[0m
+[0;32mI (121) esp_image: segment 1: paddr=0001ab90 vaddr=3ff80000 size=00004h (     4) load[0m
+[0;32mI (121) esp_image: segment 2: paddr=0001ab9c vaddr=3ffb0000 size=02100h (  8448) load[0m
+[0;32mI (130) esp_image: segment 3: paddr=0001cca4 vaddr=40080000 size=03374h ( 13172) load[0m
+[0;32mI (141) esp_image: segment 4: paddr=00020020 vaddr=400d0020 size=17b50h ( 97104) map[0m
+[0;32mI (179) esp_image: segment 5: paddr=00037b78 vaddr=40083374 size=09b2ch ( 39724) load[0m
+[0;32mI (202) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (202) boot: Disabling RNG early entropy source...[0m
+[0;32mI (214) cpu_start: Multicore app[0m
+[0;32mI (215) cpu_start: Pro cpu up.[0m
+[0;32mI (215) cpu_start: Starting app cpu, entry point is 0x400811fc[0m
+[0;32mI (0) cpu_start: App cpu up.[0m
+[0;32mI (232) cpu_start: Pro cpu start user code[0m
+[0;32mI (232) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (232) cpu_start: Application information:[0m
+[0;32mI (237) cpu_start: Project name:     flexsonic[0m
+[0;32mI (242) cpu_start: App version:      v5.1.6-415-g81ee3e87d5[0m
+[0;32mI (248) cpu_start: Compile time:     Jul 24 2025 16:05:14[0m
+[0;32mI (254) cpu_start: ELF file SHA256:  5cb7d82e3d904073...[0m
+[0;32mI (260) cpu_start: ESP-IDF:          v5.1.6-415-g81ee3e87d5[0m
+[0;32mI (267) cpu_start: Min chip rev:     v0.0[0m
+[0;32mI (271) cpu_start: Max chip rev:     v3.99 [0m
+[0;32mI (276) cpu_start: Chip rev:         v1.0[0m
+[0;32mI (281) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (288) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (294) heap_init: At 3FFB29B8 len 0002D648 (181 KiB): DRAM[0m
+[0;32mI (300) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (307) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (313) heap_init: At 4008CEA0 len 00013160 (76 KiB): IRAM[0m
+[0;32mI (321) spi_flash: detected chip: generic[0m
+[0;32mI (324) spi_flash: flash io: dio[0m
+[0;33mW (328) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (342) app_start: Starting scheduler on CPU0[0m
+[0;32mI (346) app_start: Starting scheduler on CPU1[0m
+[0;32mI (346) main_task: Started on CPU0[0m
+[0;32mI (356) main_task: Calling app_main()[0m
+[0;32mI (356) FLEX_AUDIO: Waiting for DFPlayer to boot...[0m
+[0;32mI (2856) FLEX_AUDIO: Flex ADC: 0[0m
+[0;32mI (3356) FLEX_AUDIO: Flex ADC: 0[0m
+[0;32mI (3856) FLEX_AUDIO: Flex ADC: 0[0m
+[0;32mI (4356) FLEX_AUDIO: Flex ADC: 0[0m
+[0;32mI (4856) FLEX_AUDIO: Flex ADC: 0[0m
+[0;32mI (5356) FLEX_AUDIO: Flex ADC: 0[0m
+[0;32mI (5856) FLEX_AUDIO: Flex ADC: 0[0m
+[0;32mI (6356) FLEX_AUDIO: Flex ADC: 0[0m
+[0;32mI (6856) FLEX_AUDIO: Flex ADC: 0[0m
+[0;32mI (7356) FLEX_AUDIO: Flex ADC: 0[0m
+[0;32mI (7856) FLEX_AUDIO: Flex ADC: 0[0m
+[0;32mI (8356) FLEX_AUDIO: Flex ADC: 0[0m
+[0;32mI (8856) FLEX_AUDIO: Flex ADC: 0[0m
+[0;32mI (9356) FLEX_AUDIO: Flex ADC: 0[0m
+[0;32mI (9856) FLEX_AUDIO: Flex ADC: 0[0m
+[0;32mI (10356) FLEX_AUDIO: Flex ADC: 0[0m
+[0;32mI (10856) FLEX_AUDIO: Flex ADC: 0[0m
+[0;32mI (11356) FLEX_AUDIO: Flex ADC: 0[0m
+[0;32mI (11856) FLEX_AUDIO: Flex ADC: 0[0m
+[0;32mI (12356) FLEX_AUDIO: Flex ADC: 0[0m
+[0;32mI (12856) FLEX_AUDIO: Flex ADC: 0[0m
+[0;32mI (13356) FLEX_AUDIO: Flex ADC: 0[0m
+[0;32mI (13856) FLEX_AUDIO: Flex ADC: 0[0m
+[0;32mI (14356) FLEX_AUDIO: Flex ADC: 0[0m
+[0;32mI (14856) FLEX_AUDIO: Flex ADC: 0[0m
+[0;32mI (15356) FLEX_AUDIO: Flex ADC: 0[0m
+[0;32mI (15856) FLEX_AUDIO: Flex ADC: 0[0m
+[0;32mI (16356) FLEX_AUDIO: Flex ADC: 0[0m
+[0;32mI (16856) FLEX_AUDIO: Flex ADC: 361[0m
+[0;32mI (16856) FLEX_AUDIO: Playing 0001.mp3[0m
+[0;32mI (17356) FLEX_AUDIO: Flex ADC: 186[0m
+[0;32mI (17856) FLEX_AUDIO: Flex ADC: 170[0m
+[0;32mI (18356) FLEX_AUDIO: Flex ADC: 129[0m
+[0;32mI (18856) FLEX_AUDIO: Flex ADC: 132[0m
+[0;32mI (19356) FLEX_AUDIO: Flex ADC: 73[0m
+[0;32mI (19356) FLEX_AUDIO: Stopping playback[0m
+[0;32mI (19856) FLEX_AUDIO: Flex ADC: 0[0m
+[0;32mI (20356) FLEX_AUDIO: Flex ADC: 149[0m
+[0;32mI (20356) FLEX_AUDIO: Playing 0001.mp3[0m
+[0;32mI (20856) FLEX_AUDIO: Flex ADC: 171[0m
+[0;32mI (21356) FLEX_AUDIO: Flex ADC: 144[0m
+[0;32mI (21856) FLEX_AUDIO: Flex ADC: 157[0m
+[0;32mI (22356) FLEX_AUDIO: Flex ADC: 165[0m
+[0;32mI (22856) FLEX_AUDIO: Flex ADC: 33[0m
+[0;32mI (22856) FLEX_AUDIO: Stopping playback[0m
+[0;32mI (23356) FLEX_AUDIO: Flex ADC: 143[0m
+[0;32mI (23356) FLEX_AUDIO: Playing 0001.mp3[0m
+[0;32mI (23856) FLEX_AUDIO: Flex ADC: 110[0m
+[0;32mI (24356) FLEX_AUDIO: Flex ADC: 111[0m
+[0;32mI (24856) FLEX_AUDIO: Flex ADC: 134[0m
+[0;32mI (25356) FLEX_AUDIO: Flex ADC: 144[0m
+[0;32mI (25856) FLEX_AUDIO: Flex ADC: 104[0m
+[0;32mI (26356) FLEX_AUDIO: Flex ADC: 71[0m
+[0;32mI (26356) FLEX_AUDIO: Stopping playback[0m
+[0;32mI (26856) FLEX_AUDIO: Flex ADC: 169[0m
+[0;32mI (26856) FLEX_AUDIO: Playing 0001.mp3[0m
+[0;32mI (27356) FLEX_AUDIO: Flex ADC: 143[0m
+[0;32mI (27856) FLEX_AUDIO: Flex ADC: 146[0m
+[0;32mI (28356) FLEX_AUDIO: Flex ADC: 0[0m
+[0;32mI (28356) FLEX_AUDIO: Stopping playback[0m
+[0;32mI (28856) FLEX_AUDIO: Flex ADC: 0[0m
+[0;32mI (29356) FLEX_AUDIO: Flex ADC: 0[0m
+[0;32mI (29856) FLEX_AUDIO: Flex ADC: 0[0m
+[0;32mI (30356) FLEX_AUDIO: Flex ADC: 0[0m
+[0;32mI (30856) FLEX_AUDIO: Flex ADC: 0[0m
+[0;32mI (31356) FLEX_AUDIO: Flex ADC: 0[0m
+[0;32mI (31856) FLEX_AUDIO: Flex ADC: 0[0m
+[0;32mI (32356) FLEX_AUDIO: Flex ADC: 0[0m
+[0;32mI (32856) FLEX_AUDIO: Flex ADC: 0[0m
+[0;32mI (33356) FLEX_AUDIO: Flex ADC: 0[0m
+[0;32mI (33856) FLEX_AUDIO: Flex ADC: 0[0m
+[0;32mI (34356) FLEX_AUDIO: Flex ADC: 0[0m
+[0;32mI (34856) FLEX_AUDIO: Flex ADC: 0[0m
+[0;32mI (35356) FLEX_AUDIO: Flex ADC: 0[0m
+[0;32mI (35856) FLEX_AUDIO: Flex ADC: 0[0m
+[0;32mI (36356) FLEX_AUDIO: Flex ADC: 0[0m
+[0;32mI (36856) FLEX_AUDIO: Flex ADC: 0[0m
+[0;32mI (37356) FLEX_AUDIO: Flex ADC: 0[0m
+[0;32mI (37856) FLEX_AUDIO: Flex ADC: 0[0m
+[0;32mI (38356) FLEX_AUDIO: Flex ADC: 0[0m
+[0;32mI (38856) FLEX_AUDIO: Flex ADC: 0[0m
+[0;32mI (39356) FLEX_AUDIO: Flex ADC: 0[0m
+[0;32mI (39856) FLEX_AUDIO: Flex ADC: 0[0m
+[0;32mI (40356) FLEX_AUDIO: Flex ADC: 0[0m
+[0;32mI (40856) FLEX_AUDIO: Flex ADC: 0[0m
+[0;32mI (41356) FLEX_AUDIO: Flex ADC: 0[0m
+[0;32mI (41856) FLEX_AUDIO: Flex ADC: 0[0m
+[0;32mI (42356) FLEX_AUDIO: Flex ADC: 0[0m
+[0;32mI (42856) FLEX_AUDIO: Flex ADC: 0[0m
+[0;32mI (43356) FLEX_AUDIO: Flex ADC: 0[0m
+[0;32mI (2856) FLEX_AUDIO: Flex ADC: 0[0m
+[0;32mI (3356) FLEX_AUDIO: Flex ADC: 0[0m
+[0;32mI (3856) FLEX_AUDIO: Flex ADC: 0[0m
+[0;32mI (4356) FLEX_AUDIO: Flex ADC: 0[0m
+[0;32mI (4856) FLEX_AUDIO: Flex ADC: 0[0m
+[0;32mI (5356) FLEX_AUDIO: Flex ADC: 0[0m
+[0;32mI (5856) FLEX_AUDIO: Flex ADC: 0[0m
+[0;32mI (6356) FLEX_AUDIO: Flex ADC: 0[0m
+[0;32mI (6856) FLEX_AUDIO: Flex ADC: 0[0m
+[0;32mI (7356) FLEX_AUDIO: Flex ADC: 0[0m
+[0;32mI (7856) FLEX_AUDIO: Flex ADC: 0[0m
+[0;32mI (8356) FLEX_AUDIO: Flex ADC: 0[0m
+[0;32mI (8856) FLEX_AUDIO: Flex ADC: 0[0m
+[0;32mI (9356) FLEX_AUDIO: Flex ADC: 0[0m
+[0;32mI (9856) FLEX_AUDIO: Flex ADC: 0[0m
+[0;32mI (10356) FLEX_AUDIO: Flex ADC: 0[0m
+[0;32mI (10856) FLEX_AUDIO: Flex ADC: 0[0m
+[0;32mI (11356) FLEX_AUDIO: Flex ADC: 0[0m
+[0;32mI (11856) FLEX_AUDIO: Flex ADC: 0[0m
+[0;32mI (12356) FLEX_AUDIO: Flex ADC: 0[0m
+[0;32mI (12856) FLEX_AUDIO: Flex ADC: 0[0m
+[0;32mI (13356) FLEX_AUDIO: Flex ADC: 0[0m
+[0;32mI (13856) FLEX_AUDIO: Flex ADC: 0[0m
+[0;32mI (14356) FLEX_AUDIO: Flex ADC: 0[0m
+[0;32mI (14856) FLEX_AUDIO: Flex ADC: 0[0m
+[0;32mI (15356) FLEX_AUDIO: Flex ADC: 0[0m
+[0;32mI (15856) FLEX_AUDIO: Flex ADC: 0[0m
+[0;32mI (16356) FLEX_AUDIO: Flex ADC: 0[0m
+[0;32mI (16856) FLEX_AUDIO: Flex ADC: 0[0m
+[0;32mI (17356) FLEX_AUDIO: Flex ADC: 0[0m
+[0;32mI (17856) FLEX_AUDIO: Flex ADC: 0[0m
+[0;32mI (18356) FLEX_AUDIO: Flex ADC: 0[0m
+[0;32mI (18856) FLEX_AUDIO: Flex ADC: 0[0m
+[0;32mI (19356) FLEX_AUDIO: Flex ADC: 0[0m
+[0;32mI (19856) FLEX_AUDIO: Flex ADC: 0[0m
+[0;32mI (20356) FLEX_AUDIO: Flex ADC: 0[0m
+[0;32mI (20856) FLEX_AUDIO: Flex ADC: 0[0m
+[0;32mI (21356) FLEX_AUDIO: Flex ADC: 0[0m
+[0;32mI (21856) FLEX_AUDIO: Flex ADC: 0[0m
+[0;32mI (22356) FLEX_AUDIO: Flex ADC: 0[0m
+[0;32mI (22856) FLEX_AUDIO: Flex ADC: 0[0m
+[0;32mI (23356) FLEX_AUDIO: Flex ADC: 0[0m
+[0;32mI (23856) FLEX_AUDIO: Flex ADC: 0[0m
+[0;32mI (24356) FLEX_AUDIO: Flex ADC: 0[0m
+[0;32mI (24856) FLEX_AUDIO: Flex ADC: 0[0m
+[0;32mI (25356) FLEX_AUDIO: Flex ADC: 0[0m
+[0;32mI (25856) FLEX_AUDIO: Flex ADC: 0[0m
+[0;32mI (26356) FLEX_AUDIO: Flex ADC: 0[0m
+[0;32mI (26856) FLEX_AUDIO: Flex ADC: 0[0m
+[0;32mI (27356) FLEX_AUDIO: Flex ADC: 0[0m
+[0;32mI (27856) FLEX_AUDIO: Flex ADC: 0[0m
+[0;32mI (28356) FLEX_AUDIO: Flex ADC: 0[0m
+[0;32mI (28856) FLEX_AUDIO: Flex ADC: 0[0m
+[0;32mI (29356) FLEX_AUDIO: Flex ADC: 0[0m
+[0;32mI (29856) FLEX_AUDIO: Flex ADC: 0[0m
+[0;32mI (30356) FLEX_AUDIO: Flex ADC: 0[0m
+[0;32mI (30856) FLEX_AUDIO: Flex ADC: 0[0m
+[0;32mI (31356) FLEX_AUDIO: Flex ADC: 0[0m
+[0;32mI (31856) FLEX_AUDIO: Flex ADC: 0[0m
+[0;32mI (32356) FLEX_AUDIO: Flex ADC: 0[0m
+[0;32mI (32856) FLEX_AUDIO: Flex ADC: 0[0m
+[0;32mI (33356) FLEX_AUDIO: Flex ADC: 0[0m
+[0;32mI (33856) FLEX_AUDIO: Flex ADC: 0[0m
+[0;32mI (34356) FLEX_AUDIO: Flex ADC: 0[0m
+[0;32mI (34856) FLEX_AUDIO: Flex ADC: 0[0m
+[0;32mI (35356) FLEX_AUDIO: Flex ADC: 0[0m
+[0;32mI (35856) FLEX_AUDIO: Flex ADC: 0[0m
+[0;32mI (36356) FLEX_AUDIO: Flex ADC: 0[0m
+[0;32mI (36856) FLEX_AUDIO: Flex ADC: 0[0m
+[0;32mI (37356) FLEX_AUDIO: Flex ADC: 0[0m
+[0;32mI (37856) FLEX_AUDIO: Flex ADC: 0[0m
+[0;32mI (38356) FLEX_AUDIO: Flex ADC: 0[0m
+[0;32mI (38856) FLEX_AUDIO: Flex ADC: 0[0m
+[0;32mI (39356) FLEX_AUDIO: Flex ADC: 0[0m
+[0;32mI (39856) FLEX_AUDIO: Flex ADC: 0[0m
+[0;32mI (40356) FLEX_AUDIO: Flex ADC: 0[0m
+[0;32mI (40856) FLEX_AUDIO: Flex ADC: 0[0m
+[0;32mI (41356) FLEX_AUDIO: Flex ADC: 0[0m
+[0;32mI (41856) FLEX_AUDIO: Flex ADC: 0[0m
+[0;32mI (42356) FLEX_AUDIO: Flex ADC: 0[0m
+[0;32mI (42856) FLEX_AUDIO: Flex ADC: 0[0m
+[0;32mI (43356) FLEX_AUDIO: Flex ADC: 0[0m
+[0;32mI (43856) FLEX_AUDIO: Flex ADC: 0[0m
+[0;32mI (44356) FLEX_AUDIO: Flex ADC: 0[0m
+[0;32mI (44856) FLEX_AUDIO: Flex ADC: 0[0m
+[0;32mI (45356) FLEX_AUDIO: Flex ADC: 0[0m
+[0;32mI (45856) FLEX_AUDIO: Flex ADC: 0[0m
+[0;32mI (46356) FLEX_AUDIO: Flex ADC: 0[0m
+[0;32mI (46856) FLEX_AUDIO: Flex ADC: 0[0m
+[0;32mI (47356) FLEX_AUDIO: Flex ADC: 0[0m
+[0;32mI (47856) FLEX_AUDIO: Flex ADC: 0[0m
+[0;32mI (48356) FLEX_AUDIO: Flex ADC: 0[0m
+[0;32mI (48856) FLEX_AUDIO: Flex ADC: 0[0m
+[0;32mI (49356) FLEX_AUDIO: Flex ADC: 0[0m
+[0;32mI (49856) FLEX_AUDIO: Flex ADC: 0[0m
+[0;32mI (50356) FLEX_AUDIO: Flex ADC: 0[0m
+[0;32mI (50856) FLEX_AUDIO: Flex ADC: 0[0m
+[0;32mI (51356) FLEX_AUDIO: Flex ADC: 0[0m
+[0;32mI (51856) FLEX_AUDIO: Flex ADC: 0[0m
+[0;32mI (52356) FLEX_AUDIO: Flex ADC: 0[0m
+[0;32mI (52856) FLEX_AUDIO: Flex ADC: 0[0m
+[0;32mI (53356) FLEX_AUDIO: Flex ADC: 0[0m
+[0;32mI (53856) FLEX_AUDIO: Flex ADC: 0[0m
+[0;32mI (54356) FLEX_AUDIO: Flex ADC: 0[0m
+[0;32mI (54856) FLEX_AUDIO: Flex ADC: 0[0m
+[0;32mI (55356) FLEX_AUDIO: Flex ADC: 0[0m
+[0;32mI (55856) FLEX_AUDIO: Flex ADC: 0[0m
+[0;32mI (56356) FLEX_AUDIO: Flex ADC: 0[0m
+��������������[0;32mI (56856) FLEX_AUDIO: Flex ADC: 0[0i
+������������������������[0;32mI (57356) FLEX_AUDIO: Flex ADC: 0[0m
+����������������������[0;32mI (57856) FLEX_AUDIO: Flex ADC: 0[0m
+�����������[0;32mI (58356) FLEX_AUDIO: Flex ADC: 0[0m
+������������������������������������������������������������[0;32mI (58856) FLEX_AUDIO: Flex ADC: 0[0m
+�[0;32mI (59356) FLEX_AUDIO: Flex ADC: 0[0m
+����������������[0;32mI (59856) FLEX_AUDIO: Flex ADC: 0[0m
+[0;32mI (60356) FLEX_AUDIO: Flex ADC: 0[0m
+[0;32mI (60856) FLEX_AUDIO: Flex ADC: 0[0m
+[0;32mI (61356) FLEX_AUDIO: Flex ADC: 0[0m
+��������������[0;32mI (61856) FLEX_AUDIO: F,ex ADC: 0[0m
+������������������[0;32mI (62356) FLEX_AUDIO: FLex ADC: 0[0-
+�������[0;32mI (62856) FLEX_AUDIO: Flex ADC: 0[0m
+[0;32mI (63356) FLEX_AUDIO: Flex ADC: 0[0m
+[0;32mI (63856) FLEX_AUDIO: Flex ADC: 0[0m
+[0;32mI (64356) FLEX_AUDIO: Flex ADC: 0[0m
+[0;32mI (64856) FLEX_AUDIO: Flex ADC: 0[0m
+[0;32mI (65356) FLEX_AUDIO: Flex ADC: 0[0m
+[0;32mI (65856) FLEX_AUDIO: Flex ADC: 0[0m
+[0;32mI (66356) FLEX_AUDIO: Flex ADC: 0[0m
+[0;32mI (66856) FLEX_AUDIO: Flex ADC: 0[0m
+[0;32mI (67356) FLEX_AUDIO: Flex ADC: 0[0m
+[0;32mI (67856) FLEX_AUDIO: Flex ADC: 0[0m
+[0;32mI (68356) FLEX_AUDIO: Flex ADC: 0[0m
+[0?32mI (68856) FLEX_AUDIO: Flex ADC: 0[0m
+[0;32mI (69356) FLEX_AUDIO: Flex ADC: 0[0m
+[0;32mI (69856) FLEX_AUDIO: Flex ADC: 0[0m
+[0;32mI (70356) FLEX_AUDIO: Flex ADC: 0[0m
+[0;32mI (70856) FLEX_AUDIO: Flex ADC: 0[0m
+[0;32mI (71356) FLEX_AUDIO: Flex ADC: 0[0m
+[0;32mI (71856) FLEX_AUDIO: Flex ADC: 0[0m
+[0;32mI (72356) FLEX_AUDIO: Flex ADC: 0[0m
+[0;32mI (72856) FLEX_AUDIO: Flex ADC: 0[pm
+[0;32mI (73356) FLEX_AUDIO: Flex ADC: 0[0m
+[0;32mI (73856) FLEX_AUDIO: Flex ADC: 0[0m
+[0;32mI (74356) FLEX_AUDIO: Flex ADC: 0[0m
+[0;32mI (74856) FLEX_AUDIO: Flex ADC: 0[0m
+[0;32mI (75356) FLEX_AUDIO: Flex ADC: 19[0m
+[0;32mI (75856) FLEX_AUDIO: Flex ADC: 92[0m
+[0;32mI (76356) FLEX_AUDIO: F�Y�ADC: 91[0m
+[0;32mI (76856) FLEX_AUDIO: Flex ADC: 0[0m
+[0;32mI (77356) FLEX_AUDIO: Flex ADC: 417[0m
+[0;32mI (77356) FLEX_AUDIOz P�ay�ng 0001.}p3_pm
+[0;32mI (7?856) F\EX_AUDIO: Flex ADC: 379[0m
+[0;32mI (78356) FLEX_AUDIO: Flex ADC: 300[0m
