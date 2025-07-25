@@ -23,6 +23,16 @@
 11. git push origin branch-name : upload to GitHub
 
 
+
+## Lightweight markup language
+- Lets one format text easily using symbols like #,*,-, etc
+- Used in obsidian, github readme files, notion, blogging, documentation, etc.
+- files are saved as .md (markdown files)
+
+
+
+
+
 ### ESP32
 
 The ESP32 is a series of chip microcontrollers developed by Espressif. 
