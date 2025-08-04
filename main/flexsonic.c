@@ -69,7 +69,6 @@ void app_main() {
         int val3 = adc1_get_raw(FLEX3_ADC);
         int val4 = adc1_get_raw(FLEX4_ADC);
         int val5 = 0;
-
         adc2_get_raw(FLEX5_ADC, ADC_WIDTH_BIT_10, &val5);
 
         printf("FLEX1 (GPIO35): %d\n", val1);
@@ -78,7 +77,24 @@ void app_main() {
         printf("FLEX4 (GPIO32): %d\n", val4);
         printf("FLEX5 (GPIO27): %d\n", val5);
 
-        if (val1 >= FLEX_MIN && val1 <= FLEX_MAX) {
+        // Combination conditions come first so they have higher priority
+        if ((val1 >= FLEX_MIN && val1 <= FLEX_MAX) && (val2 >= FLEX_MIN && val2 <= FLEX_MAX)) {
+            printf("Combo Track 6 is playing (FLEX1 + FLEX2)...\n");
+            send_dfplayer_command(0x03, 6);
+            vTaskDelay(3000 / portTICK_PERIOD_MS);
+        } else if ((val3 >= FLEX_MIN && val3 <= FLEX_MAX) && (val4 >= FLEX_MIN && val4 <= FLEX_MAX)) {
+            printf("Combo Track 7 is playing (FLEX3 + FLEX4)...\n");
+            send_dfplayer_command(0x03, 7);
+            vTaskDelay(3000 / portTICK_PERIOD_MS);
+        } else if ((val2 >= FLEX_MIN && val2 <= FLEX_MAX) && (val5 >= FLEX_MIN && val5 <= FLEX_MAX)) {
+            printf("Combo Track 8 is playing (FLEX2 + FLEX5)...\n");
+            send_dfplayer_command(0x03, 8);
+            vTaskDelay(3000 / portTICK_PERIOD_MS);
+        } else if ((val1 >= FLEX_MIN && val1 <= FLEX_MAX) && (val5 >= FLEX_MIN && val5 <= FLEX_MAX)) {
+            printf("Combo Track 9 is playing (FLEX1 + FLEX5)...\n");
+            send_dfplayer_command(0x03, 9);
+            vTaskDelay(3000 / portTICK_PERIOD_MS);
+        } else if (val1 >= FLEX_MIN && val1 <= FLEX_MAX) {
             printf("Track 1 is playing...\n");
             send_dfplayer_command(0x03, 1);
             vTaskDelay(3000 / portTICK_PERIOD_MS);
