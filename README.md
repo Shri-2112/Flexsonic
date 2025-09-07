@@ -52,6 +52,7 @@ The glove uses **flex sensors** (to detect finger bending) and an **MPU6050 IMU*
 
 ## 📂 File Structure
 
+```plaintext
 Flexsonic
 ├── .obsidian/                  # Notes (Obsidian workspace)
 │   └── Pre-requisites.md       # Basic notes
@@ -89,6 +90,7 @@ Flexsonic
 ├── README.md                   # Project documentation
 ├── sdkconfig                   # ESP-IDF config file
 └── CMakeLists.txt              # ESP-IDF build file
+
           
 
 ## Getting Started
