@@ -65,7 +65,8 @@ Flexsonic
 │   ├── data.py                 # Data logging script
 │   ├── data.txt                # Raw dataset (text format)
 │   ├── graph.py                # Graphical representation of dataset
-│   ├── data_processed/         # Processed dataset
+ 
+├── data_processed/             # Processed dataset
 │   ├── data_with_clusters.csv  # Clustered dataset
 │   ├── gesture_labeled.csv     # Labeled dataset
 │   └── gesture_parsed.csv      # Parsed dataset
@@ -105,12 +106,6 @@ Flexsonic
 - `esp32` board support package  
 - `Adafruit_MPU6050`  
 - `DFRobotDFPlayerMini`  
-
-**If using Python ML scripts:**  
-
-```bash
-pip install -r requirements.txt
-```
 
 ## ⚙️ Installation
 
@@ -165,9 +160,9 @@ You can check out the project demo here:
 
 - **Video Demo**: [Link to Demo Video]((https://drive.google.com/drive/u/1/folders/15n2ZFe-JPjL3UnUXSdUzd99bNddICzaB))  
 - **Presentation Slides**: [Link to Slides]((https://www.canva.com/design/DAGyOgvHR_g/AEBH3-gOgE6V5_-GN-xAhQ/edit?ui=eyJEIjp7IlAiOnsiQiI6ZmFsc2V9fX0))  
-- **Code Repository**: [GitHub Repo]((https://discord.com/channels/@me/1413976057781944411/1413977835952930918))  
+- **Code Repository**: [GitHub Repo]((https://github.com/Shri-2112/Flexsonic/edit/main/README.md))
+-  **Report**: [Report]((https://docs.google.com/document/d/1HKS84uFSLEKu0bnds3yKIxZUHhPXA11tdXNKVdhrtBQ/edit?tab=t.0)))  
 
-*(Add actual screenshots/images of your setup and Serial Monitor output here)*
 ```
 ```
 ## Future Work
@@ -247,10 +242,4 @@ Here are some references and tools that helped during development:
 - [EspIDF Libraries](https://docs.espressif.com/projects/esp-idf/en/stable/esp32/get-started/index.html)
 - [K-means Algorithm (ML basics)](https://scikit-learn.org/stable/modules/clustering.html#k-means)  
 
----
-
-## License
-
-This project is licensed under the **MIT License** – see the [LICENSE](LICENSE) file for details.  
-You are free to use, modify, and distribute this project, provided proper attribution is given.  
 
