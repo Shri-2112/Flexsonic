@@ -1,0 +1,56 @@
+-- IDF_TARGET not set, using default target: esp32
+-- Found Git: /usr/bin/git (found version "2.34.1") 
+-- The C compiler identification is GNU 12.2.0
+-- The CXX compiler identification is GNU 12.2.0
+-- The ASM compiler identification is GNU
+-- Found assembler: /home/janhavi/.espressif/tools/xtensa-esp32-elf/esp-12.2.0_20230208/xtensa-esp32-elf/bin/xtensa-esp32-elf-gcc
+-- Detecting C compiler ABI info
+-- Detecting C compiler ABI info - done
+-- Check for working C compiler: /home/janhavi/.espressif/tools/xtensa-esp32-elf/esp-12.2.0_20230208/xtensa-esp32-elf/bin/xtensa-esp32-elf-gcc - skipped
+-- Detecting C compile features
+-- Detecting C compile features - done
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Check for working CXX compiler: /home/janhavi/.espressif/tools/xtensa-esp32-elf/esp-12.2.0_20230208/xtensa-esp32-elf/bin/xtensa-esp32-elf-g++ - skipped
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- Building ESP-IDF components for target esp32
+-- Project sdkconfig file /home/janhavi/esp/esp-idf/flexsonic/sdkconfig
+-- Looking for sys/types.h
+-- Looking for sys/types.h - found
+-- Looking for stdint.h
+-- Looking for stdint.h - found
+-- Looking for stddef.h
+-- Looking for stddef.h - found
+-- Check size of time_t
+-- Check size of time_t - done
+-- Found Python3: /home/janhavi/.espressif/python_env/idf5.1_py3.10_env/bin/python (found version "3.10.12") found components: Interpreter 
+-- Looking for pthread.h
+-- Looking for pthread.h - found
+-- Performing Test CMAKE_HAVE_LIBC_PTHREAD
+-- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Failed
+-- Check if compiler accepts -pthread
+-- Check if compiler accepts -pthread - no
+-- Looking for pthread_create in pthreads
+-- Looking for pthread_create in pthreads - not found
+-- Looking for pthread_create in pthread
+-- Looking for pthread_create in pthread - not found
+-- Could NOT find Threads (missing: Threads_FOUND) 
+-- Performing Test C_COMPILER_SUPPORTS_WFORMAT_SIGNEDNESS
+-- Performing Test C_COMPILER_SUPPORTS_WFORMAT_SIGNEDNESS - Success
+-- USING O3
+-- App "flexsonic" version: v5.1.6-415-g81ee3e87d5
+-- Adding linker script /home/janhavi/esp/esp-idf/flexsonic/build/esp-idf/esp_system/ld/memory.ld
+-- Adding linker script /home/janhavi/esp/esp-idf/components/esp_system/ld/esp32/sections.ld.in
+-- Adding linker script /home/janhavi/esp/esp-idf/components/esp_rom/esp32/ld/esp32.rom.ld
+-- Adding linker script /home/janhavi/esp/esp-idf/components/esp_rom/esp32/ld/esp32.rom.api.ld
+-- Adding linker script /home/janhavi/esp/esp-idf/components/esp_rom/esp32/ld/esp32.rom.libgcc.ld
+-- Adding linker script /home/janhavi/esp/esp-idf/components/esp_rom/esp32/ld/esp32.rom.newlib-data.ld
+-- Adding linker script /home/janhavi/esp/esp-idf/components/esp_rom/esp32/ld/esp32.rom.syscalls.ld
+-- Adding linker script /home/janhavi/esp/esp-idf/components/esp_rom/esp32/ld/esp32.rom.newlib-funcs.ld
+-- Adding linker script /home/janhavi/esp/esp-idf/components/soc/esp32/ld/esp32.peripherals.ld
+-- Components: app_trace app_update bootloader bootloader_support bt cmock console cxx driver efuse esp-tls esp_adc esp_app_format esp_coex esp_common esp_eth esp_event esp_gdbstub esp_hid esp_http_client esp_http_server esp_https_ota esp_https_server esp_hw_support esp_lcd esp_local_ctrl esp_mm esp_netif esp_netif_stack esp_partition esp_phy esp_pm esp_psram esp_ringbuf esp_rom esp_system esp_timer esp_wifi espcoredump esptool_py fatfs freertos hal heap http_parser idf_test ieee802154 json log lwip main mbedtls mqtt newlib nvs_flash openthread partition_table perfmon protobuf-c protocomm pthread sdmmc soc spi_flash spiffs tcp_transport ulp unity usb vfs wear_levelling wifi_provisioning wpa_supplicant xtensa
+-- Component paths: /home/janhavi/esp/esp-idf/components/app_trace /home/janhavi/esp/esp-idf/components/app_update /home/janhavi/esp/esp-idf/components/bootloader /home/janhavi/esp/esp-idf/components/bootloader_support /home/janhavi/esp/esp-idf/components/bt /home/janhavi/esp/esp-idf/components/cmock /home/janhavi/esp/esp-idf/components/console /home/janhavi/esp/esp-idf/components/cxx /home/janhavi/esp/esp-idf/components/driver /home/janhavi/esp/esp-idf/components/efuse /home/janhavi/esp/esp-idf/components/esp-tls /home/janhavi/esp/esp-idf/components/esp_adc /home/janhavi/esp/esp-idf/components/esp_app_format /home/janhavi/esp/esp-idf/components/esp_coex /home/janhavi/esp/esp-idf/components/esp_common /home/janhavi/esp/esp-idf/components/esp_eth /home/janhavi/esp/esp-idf/components/esp_event /home/janhavi/esp/esp-idf/components/esp_gdbstub /home/janhavi/esp/esp-idf/components/esp_hid /home/janhavi/esp/esp-idf/components/esp_http_client /home/janhavi/esp/esp-idf/components/esp_http_server /home/janhavi/esp/esp-idf/components/esp_https_ota /home/janhavi/esp/esp-idf/components/esp_https_server /home/janhavi/esp/esp-idf/components/esp_hw_support /home/janhavi/esp/esp-idf/components/esp_lcd /home/janhavi/esp/esp-idf/components/esp_local_ctrl /home/janhavi/esp/esp-idf/components/esp_mm /home/janhavi/esp/esp-idf/components/esp_netif /home/janhavi/esp/esp-idf/components/esp_netif_stack /home/janhavi/esp/esp-idf/components/esp_partition /home/janhavi/esp/esp-idf/components/esp_phy /home/janhavi/esp/esp-idf/components/esp_pm /home/janhavi/esp/esp-idf/components/esp_psram /home/janhavi/esp/esp-idf/components/esp_ringbuf /home/janhavi/esp/esp-idf/components/esp_rom /home/janhavi/esp/esp-idf/components/esp_system /home/janhavi/esp/esp-idf/components/esp_timer /home/janhavi/esp/esp-idf/components/esp_wifi /home/janhavi/esp/esp-idf/components/espcoredump /home/janhavi/esp/esp-idf/components/esptool_py /home/janhavi/esp/esp-idf/components/fatfs /home/janhavi/esp/esp-idf/components/freertos /home/janhavi/esp/esp-idf/components/hal /home/janhavi/esp/esp-idf/components/heap /home/janhavi/esp/esp-idf/components/http_parser /home/janhavi/esp/esp-idf/components/idf_test /home/janhavi/esp/esp-idf/components/ieee802154 /home/janhavi/esp/esp-idf/components/json /home/janhavi/esp/esp-idf/components/log /home/janhavi/esp/esp-idf/components/lwip /home/janhavi/esp/esp-idf/flexsonic/main /home/janhavi/esp/esp-idf/components/mbedtls /home/janhavi/esp/esp-idf/components/mqtt /home/janhavi/esp/esp-idf/components/newlib /home/janhavi/esp/esp-idf/components/nvs_flash /home/janhavi/esp/esp-idf/components/openthread /home/janhavi/esp/esp-idf/components/partition_table /home/janhavi/esp/esp-idf/components/perfmon /home/janhavi/esp/esp-idf/components/protobuf-c /home/janhavi/esp/esp-idf/components/protocomm /home/janhavi/esp/esp-idf/components/pthread /home/janhavi/esp/esp-idf/components/sdmmc /home/janhavi/esp/esp-idf/components/soc /home/janhavi/esp/esp-idf/components/spi_flash /home/janhavi/esp/esp-idf/components/spiffs /home/janhavi/esp/esp-idf/components/tcp_transport /home/janhavi/esp/esp-idf/components/ulp /home/janhavi/esp/esp-idf/components/unity /home/janhavi/esp/esp-idf/components/usb /home/janhavi/esp/esp-idf/components/vfs /home/janhavi/esp/esp-idf/components/wear_levelling /home/janhavi/esp/esp-idf/components/wifi_provisioning /home/janhavi/esp/esp-idf/components/wpa_supplicant /home/janhavi/esp/esp-idf/components/xtensa
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /home/janhavi/esp/esp-idf/flexsonic/build
