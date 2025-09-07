@@ -1,6 +1,4 @@
 # FlexSonic – Smart Glove for Gesture-to-Speech Communication
-
-**One line description:**  
 A wearable assistive device that translates hand gestures into audible speech using flex sensors, IMU, ESP32, and DFPlayer Mini.
 
 ---
@@ -30,10 +28,6 @@ FlexSonic aims to bridge the communication gap for speech-impaired individuals b
 ### Description  
 The glove uses **flex sensors** (to detect finger bending) and an **MPU6050 IMU** (to capture orientation). Sensor data is processed on an **ESP32**, which runs a simple **ML model (K-Means clustering)** to classify gestures. The recognized gesture is mapped to a **pre-recorded audio file** on a **DFPlayer Mini**, producing real-time speech output through a speaker.  
 
-This project is inspired by **MIT’s SignAloud glove** but focuses on affordability, portability, and offline audio output.
-
----
-
 ## 🛠️ Tech Stack
 
 **Hardware:**  
@@ -47,7 +41,8 @@ This project is inspired by **MIT’s SignAloud glove** but focuses on affordabi
 **Software:**  
 - Arduino IDE / PlatformIO (ESP32 firmware)  
 - C / Embedded C for driver code  
-- Python (for ML model training & testing)  
+- Python (for ML model training & testing)
+- ML Libraries: scikit-learn
 
 **Frameworks/Tools:**  
 - FreeRTOS (ESP32 task scheduling)  
@@ -56,7 +51,7 @@ This project is inspired by **MIT’s SignAloud glove** but focuses on affordabi
 ---
 
 ## 📂 File Structure
-.
+
 ├── docs                    
 │   ├── report.pdf          # Project report
 │   └── results             # Screenshots, gifs, videos of results
@@ -202,12 +197,12 @@ This project was made possible with the efforts of:
 
 ### Mentees
 - **Janhavi Mokal**
-- **Shrinivas Pathak*
+- **Shrinivas Pathak**
 
 ### Mentors
 - **Bhavesh Phundhkar**
 - **Yash Suthar**
-- **Swanand Hard Patil**
+- **Swanand Patil**
 
 Contributions are always welcome!  
 Feel free to fork this repo, create a branch, and submit a pull request.  
