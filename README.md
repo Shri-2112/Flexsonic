@@ -52,43 +52,46 @@ The glove uses **flex sensors** (to detect finger bending) and an **MPU6050 IMU*
 
 ## 📂 File Structure
 
-├── Flexsonic                    
-│   ├── .obsidian          # Notes taking
-│   └── Pre-requisites.md  # Basic Notes
+Flexsonic
+├── .obsidian/                  # Notes (Obsidian workspace)
+│   └── Pre-requisites.md       # Basic notes
 │
-├── audio                  # All thre audios currently in use
-│             
-├── build        
-│   
-├── data collection                    
-│   ├── data.py            # Data Logging
-│   └── data.txt           # Text files of data set
-│   └── graph.py           # Graphical Represenatation of data set
+├── audio/                      # All audio files in use
 │
-├── data processed
-│   ├── data_with_clusters.csv            
-│   └── gesture_labeled.csv          
-│   └── gesture_parsed.csv
-|
-├── main
-│   ├── 1_flex.c            
-│   └── 2_mpu.c          
-│   └── 3_mpu_and_flex.c
-│   ├── 4_sentence_gesture.c            
+├── build/                      # ESP-IDF build output
+│
+├── data_collection/            # Raw data logging + visualization
+│   ├── data.py                 # Data logging script
+│   ├── data.txt                # Raw dataset (text format)
+│   ├── graph.py                # Graphical representation of dataset
+│   ├── data_processed/         # Processed dataset
+│   ├── data_with_clusters.csv  # Clustered dataset
+│   ├── gesture_labeled.csv     # Labeled dataset
+│   └── gesture_parsed.csv      # Parsed dataset
+│
+├── main/                       # ESP32 firmware (C code)
+│   ├── 1_flex.c
+│   ├── 2_mpu.c
+│   ├── 3_mpu_and_flex.c
+│   ├── 4_sentence_gesture.c
 │   └── 5_numbers_gesture.c
-├── ml
-│   ├── 1_raw_to_csv.py            
-│   └── 2_preprocess_train_kmeans.py          
-│   └── 3_gesture_label.py
-│   ├── 4_predict_and_audio.py           
-│   └── kmeans_clusters.png
 │
-├── models
-├── README.md 
-├── sdkconfig               
-└── CMakeLists.txt          
+├── ml/                         # Machine Learning pipeline
+│   ├── 1_raw_to_csv.py         # Convert raw logs → CSV
+│   ├── 2_preprocess_train_kmeans.py  # Preprocessing + train KMeans
+│   ├── 3_gesture_label.py      # Assign labels to gestures
+│   ├── 4_predict_and_audio.py  # Live prediction + audio playback
+│   └── kmeans_clusters.png     # Visualization of clusters
+│
+├── models/                     # Saved ML models
+│   └── gesture_clusters.pkl
+│
+├── README.md                   # Project documentation
+├── sdkconfig                   # ESP-IDF config file
+└── CMakeLists.txt              # ESP-IDF build file
+          
 
-## 🚀 Getting Started
+## Getting Started
 
 ### 📌 Prerequisites
 - **ESP-IDF v4.0+** (or Arduino IDE with ESP32 boards installed)  
