@@ -52,31 +52,41 @@ The glove uses **flex sensors** (to detect finger bending) and an **MPU6050 IMU*
 
 ## 📂 File Structure
 
-├── docs                    
-│   ├── report.pdf          # Project report
-│   └── results             # Screenshots, gifs, videos of results
+├── Flexsonic                    
+│   ├── .obsidian          # Notes taking
+│   └── Pre-requisites.md  # Basic Notes
 │
-├── src                     
-│   ├── main.ino            # Main ESP32 program integrating sensors + DFPlayer
-│   ├── flex_test.ino       # Test code for flex sensors
-│   ├── imu_test.ino        # Test code for MPU6050
-│   ├── dfplayer_test.ino   # Test code for DFPlayer Min
-│   └── ml_model/           # Python scripts for gesture classification
+├── audio                  # All thre audios currently in use
+│             
+├── build        
+│   
+├── data collection                    
+│   ├── data.py            # Data Logging
+│   └── data.txt           # Text files of data set
+│   └── graph.py           # Graphical Represenatation of data set
 │
-├── hardware                
-│   ├── circuit_diagram.png # Circuit diagram
-│   ├── pcb_layout.png      # PCB design
+├── data processed
+│   ├── data_with_clusters.csv            
+│   └── gesture_labeled.csv          
+│   └── gesture_parsed.csv
+|
+├── main
+│   ├── 1_flex.c            
+│   └── 2_mpu.c          
+│   └── 3_mpu_and_flex.c
+│   ├── 4_sentence_gesture.c            
+│   └── 5_numbers_gesture.c
+├── ml
+│   ├── 1_raw_to_csv.py            
+│   └── 2_preprocess_train_kmeans.py          
+│   └── 3_gesture_label.py
+│   ├── 4_predict_and_audio.py           
+│   └── kmeans_clusters.png
 │
-├── test                    
-│   ├── integration         # Gesture → phrase mapping tests
-│   └── unit                # Individual sensor driver tests
-│
-├── audio                   # All thre audios currently in use
-│
-├── LICENSE
+├── models
 ├── README.md 
-├── Setup.md                # Detailed setup instructions
-└── todo.md                 # Future tasks and ongoing progress
+├── sdkconfig               
+└── CMakeLists.txt          
 
 ## 🚀 Getting Started
 
@@ -145,9 +155,9 @@ Follow these steps to run and test the project:
 ### Demo
 You can check out the project demo here:
 
-- **Video Demo**: [Link to Demo Video](https://your-demo-link.com)  
-- **Presentation Slides**: [Link to Slides](https://your-slides-link.com)  
-- **Code Repository**: [GitHub Repo](https://github.com/your-repo)  
+- **Video Demo**: [Link to Demo Video]((https://drive.google.com/drive/u/1/folders/15n2ZFe-JPjL3UnUXSdUzd99bNddICzaB))  
+- **Presentation Slides**: [Link to Slides]((https://www.canva.com/design/DAGyOgvHR_g/AEBH3-gOgE6V5_-GN-xAhQ/edit?ui=eyJEIjp7IlAiOnsiQiI6ZmFsc2V9fX0))  
+- **Code Repository**: [GitHub Repo]((https://discord.com/channels/@me/1413976057781944411/1413977835952930918))  
 
 *(Add actual screenshots/images of your setup and Serial Monitor output here)*
 ```
@@ -223,9 +233,10 @@ A big thank you to:
 Here are some references and tools that helped during development:  
 
 - [ESP32 Documentation](https://docs.espressif.com/projects/esp-idf/en/latest/esp32/)  
-- [DFPlayer Mini Wiki](https://wiki.dfrobot.com/DFPlayer_Mini_SKU_DFR0299)  
-- [MPU6050 Guide](https://playground.arduino.cc/Main/MPU-6050/)  
-- [Arduino Libraries](https://www.arduino.cc/reference/en/libraries/)  
+- [DFPlayer Mini]((https://drive.google.com/file/d/1GSC8MQxoYqVRTvDOjcIIacYCaxSEa7fd/view))  
+- [MPU6050 Guide]((https://invensense.tdk.com/wp-content/uploads/2015/02/MPU-6000-Datasheet1.pdf))
+- [Flex Sensors]((https://cdn.sparkfun.com/assets/8/e/7/a/0/flex22.pdf))
+- [EspIDF Libraries]((https://docs.espressif.com/projects/esp-idf/en/stable/esp32/get-started/index.html))  
 - [K-means Algorithm (ML basics)](https://scikit-learn.org/stable/modules/clustering.html#k-means)  
 
 ---
