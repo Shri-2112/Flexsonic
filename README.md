@@ -241,10 +241,10 @@ A big thank you to:
 Here are some references and tools that helped during development:  
 
 - [ESP32 Documentation](https://docs.espressif.com/projects/esp-idf/en/latest/esp32/)  
-- [DFPlayer Mini]((https://drive.google.com/file/d/1GSC8MQxoYqVRTvDOjcIIacYCaxSEa7fd/view))  
-- [MPU6050 Guide]((https://invensense.tdk.com/wp-content/uploads/2015/02/MPU-6000-Datasheet1.pdf))
-- [Flex Sensors]((https://cdn.sparkfun.com/assets/8/e/7/a/0/flex22.pdf))
-- [EspIDF Libraries]((https://docs.espressif.com/projects/esp-idf/en/stable/esp32/get-started/index.html))  
+- [DFPlayer Mini](https://drive.google.com/file/d/1GSC8MQxoYqVRTvDOjcIIacYCaxSEa7fd/view) 
+- [MPU6050 Guide](https://invensense.tdk.com/wp-content/uploads/2015/02/MPU-6000-Datasheet1.pdf)
+- [Flex Sensors](https://cdn.sparkfun.com/assets/8/e/7/a/0/flex22.pdf)
+- [EspIDF Libraries](https://docs.espressif.com/projects/esp-idf/en/stable/esp32/get-started/index.html)
 - [K-means Algorithm (ML basics)](https://scikit-learn.org/stable/modules/clustering.html#k-means)  
 
 ---
