@@ -93,13 +93,14 @@ Flexsonic
 
           
 
+```
 ## 🚀 Getting Started  
 
 ### 📌 Prerequisites  
-
+```
 - **ESP-IDF v4.0+** (or Arduino IDE with ESP32 boards installed)  
 - **Python 3.8+**  
-
+```
 **Required libraries (Arduino/ESP32):**  
 - `esp32` board support package  
 - `Adafruit_MPU6050`  
@@ -109,7 +110,7 @@ Flexsonic
 
 ```bash
 pip install -r requirements.txt
-
+```
 
 ## ⚙️ Installation
 
